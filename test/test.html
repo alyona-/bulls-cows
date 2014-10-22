@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEST RANDOM NUMBER</title>
+    <meta charset="UTF-8">
+    <style>
+        .result {
+            width:600px;
+            height:300px;
+            border:2px dashed #b1bec9;
+            margin-top:30px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="compnumber"></div>
+<label for="number">Введите число:</label>
+<br>
+<input id="number">
+<br>
+<button class="button">Узнать</button>
+<div class="result"></div>
+
+
+<script>
+
+    function random() {
+        var min=100, max =9999;
+        comp.rand = min - 0.5 + Math.random()*(max-min+1);
+        //alert('test');
+        comp.rand = Math.round(comp.rand);
+        alert(comp.rand);
+        //return rand;
+    }
+
+    var page = {};
+    page.body = document.body;
+    page.compnumber = document.getElementsByClassName('compnumber')[0];
+    page.number = document.getElementById('number');
+    page.button = document.getElementsByClassName('button')[0];
+    page.result = document.getElementsByClassName('result')[0];
+    page.str = new String();
+    page.button.addEventListener('click',function(){
+        // random();
+      /*  comp.num_4 = comp.rand % 10;
+        comp.num_3 = parseInt(comp.rand / 10 % 10);
+        comp.num_2 = parseInt((comp.rand/ 10 / 10) % 10);
+        comp.num_1 = parseInt(comp.rand / 10 / 10 / 10); */
+
+      /*  if(comp.num_1==comp.num_2||comp.num_1==comp.num_3||comp.num_1==comp.num_4||comp.num_2==comp.num_3||comp.num_2==comp.num_4||comp.num_3==comp.num_4){
+            rand();
+        } */
+
+        var number = 0;
+        while(number!=1) {
+
+            random();
+
+            comp.num_4 = comp.number % 10;
+            comp.num_3 = parseInt(comp.number / 10 % 10);
+            comp.num_2 = parseInt((comp.number/ 10 / 10) % 10);
+            if(comp.rand<1000) comp.num_1=0; else
+            comp.num_1 = parseInt(comp.number / 10 / 10 / 10);
+
+
+            page.str = 'comp.rand='+comp.rand+'<br>'+
+                    'comp.num_1='+comp.num_1+'<br>'+
+                    'comp.num_2='+comp.num_2+'<br>'+
+                    'comp.num_3='+comp.num_3+'<br>'+
+                    'comp.num_4='+comp.num_4+'<br>';
+            if(comp.num_1==comp.num_2||comp.num_1==comp.num_3||comp.num_1==comp.num_4||comp.num_2==comp.num_3||comp.num_2==comp.num_4||comp.num_3==comp.num_4){
+                alert('Число не уникально');
+                random();
+
+            } else number =1;
+        }
+
+
+
+
+
+
+
+
+
+
+        num.number = page.number.value;
+        num.num_4 = num.number % 10;
+        num.num_3 = parseInt(num.number / 10 % 10);
+        num.num_2 = parseInt((num.number/ 10 / 10) % 10);
+        num.num_1 = parseInt(num.number / 10 / 10 / 10);
+
+        page.str = page.str +'num.number='+num.number+'<br>'+
+                'num.num_1='+num.num_1+'<br>'+
+                'num.num_2='+num.num_2+'<br>'+
+                'num.num_3='+num.num_3+'<br>'+
+                'num.num_4='+num.num_4+'<br>';
+
+        page.result.innerHTML = page.str;
+
+
+
+    },false);
+
+
+   var num = {};
+
+    var comp ={};
+
+</script>
+</body>
+</html>

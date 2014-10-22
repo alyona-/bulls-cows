@@ -1,0 +1,28 @@
+html, body {
+    height:100%;
+    width:100%;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background: linear-gradient(to top, #F5F5F5, #ccc7c7);
+}
+#compnumber {
+    width:100px;
+    height:30px;
+}
+#number {
+}
+.getResult {
+}
+.result {
+    width:600px;
+    height:300px;
+    border:2px dashed #b1bec9;
+    margin-top:30px;
+    background: #fff;
+}
+span {
+    color:purple;
+}
